@@ -38,6 +38,16 @@ https://code.earthengine.google.com/35444fd02cbf8762fc13a428e09a60aa
 
 Note: Yala rice yield maps will occasionally have strong district effects due to one-hot-coding implemented in yield estimation algorithms. This is described in the accompanying paper.  To this end, there is an [alternate version](https://code.earthengine.google.com/f027e525b93163dac818dddcdfdd9389) of the yield estimation algorithm that removes the district effect.
 
+# Examples
+
+[Visualize a single year [2022] Maha rice map](https://code.earthengine.google.com/c0f8a5f93ec24b8bc878a69463226fa8).  Yellow colored pixels are rice detected fields and non-rice fields are transparent. 
+
+[Visualize a single year [2022] Yala rice map](https://code.earthengine.google.com/e44ae9ee06764a8beb8a8d0058825fb1).  Yellow colored pixels are rice detected fields and non-rice fields are transparent. 
+
+[Visualize 15 years [2010-2024] of Maha rice maps as frequency](https://code.earthengine.google.com/f55b935cda2568b65201eb02b7cd4764). Pixel values will range from 1 [1 year out of 15 years was detected as rice] to 15 [all 15 years were detected as rice]. Pixels are color coded from white [1 year out of 15] to red [15 years out of 15].
+
+[Visualize 15 years [2010-2024] of Yala rice maps as frequency](https://code.earthengine.google.com/3dd90fb99c5304b91610e4c6059fab43). Pixel values will range from 1 [1 year out of 15 years was detected as rice] to 15 [all 15 years were detected as rice]. Pixels are color coded from white [1 year out of 15] to red [15 years out of 15].
+
 
 
 
