@@ -1,4 +1,4 @@
-# This repository contains the code and data to reproduce Ozdogan et al [2025] paper<sup>*</sup>.
+# This repository contains the code and data to reproduce Ozdogan et al [2025] paper[^1].
 
 **<ins>Step 1:</ins>** Set up a free Google Earth Engine (GEE) account as described [here](https://courses.spatialthoughts.com/gee-sign-up.html).
 
@@ -42,7 +42,7 @@ Note: Yala rice yield maps will occasionally have strong district effects due to
 
 
 
-
+[^1]: Özdoğan, M.; Wang, S.; Ghose, D.; Fraga, E.; Fernandes, A.; Verala, G. Field-Scale Rice Area and Yield Mapping in Sri Lanka with Optical Remote Sensing and Limited Training Data. Remote Sens. 2025, 17, x. https://doi.org/10.3390/xxxxx
 
 
 
