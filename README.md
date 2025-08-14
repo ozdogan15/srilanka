@@ -50,7 +50,7 @@ Note: Yala rice yield maps will occasionally have strong district effects due to
 
 # Data availability statement
 
-The data used in this analysis is available in GEE and cane be accessed using the code editor and repository links provided above. Datasets outside of GEE are also provided in this repository.
+The data used in this analysis is available in GEE and can be accessed using the code editor and repository links provided above. Datasets outside of GEE are also provided in this repository.
 
 
 
