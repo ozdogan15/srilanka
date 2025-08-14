@@ -48,6 +48,35 @@ Note: Yala rice yield maps will occasionally have strong district effects due to
 
 [Visualize 15 years [2010-2024] of Yala rice maps as frequency](https://code.earthengine.google.com/3dd90fb99c5304b91610e4c6059fab43). Pixel values will range from 1 [1 year out of 15 years was detected as rice] to 15 [all 15 years were detected as rice]. Pixels are color coded from white [1 year out of 15] to red [15 years out of 15].
 
+# Additional instructions on how to recreate figures in the manuscript
+The image and tabular data generated using the GEE scripts above will need to be further processed in a GIS software to convert from exported format to color figure format to reproduce the figures in the manuscript.  Two example are provided here.
+
+<ins>Example 1: </ins>Steps to recreate Figure 9 in the manuscript.  This figure shows the Maha 2021/2022 rice map of Sri Lanka derived from remote sensing. The red-colored locations are individual image pixels (fields) identified as rice following the methodology described in the text. Also shown are the district boundaries drawn in lighter black lines.
+
+1. Download Sri Lanka District Boundaries
+First, you need to get the vector data for Sri Lanka's districts. Navigate to the [GADM download page](https://gadm.org/download_country.html). Select Sri Lanka from the "Country" dropdown menu. Choose GeoPackage as the format. This is a modern, single-file format that's easy to work with. Click the Download button. Save the .gpkg file to a known location on your computer.
+
+2. Add Your Layers to QGIS
+Open QGIS. Locate the Browser Panel, which is typically on the left side of the screen. In the Browser Panel, navigate to the folder where you saved the GADM GeoPackage file and your rice field GeoTIFF image (from Step 2 above). Drag and drop both files directly into the Layers Panel (the panel below the Browser, where layer names appear). You should now see both layers displayed in the main map window. Don't worry about the colors yet. QGIS will assign random or default colors.
+
+3. Colorize the Rice Field Raster (GeoTIFF)
+This is the core step where you'll assign red to the rice fields and make the background transparent (or white). In the Layers Panel, right-click on your rice field GeoTIFF layer and select Properties. In the Properties window, go to the Symbology tab on the left. At the top, click the dropdown menu for Render type and change it from Singleband gray to Paletted/Unique Values. A new panel will appear below. Click the green Classify button at the bottom. QGIS will scan your image and find all the unique pixel values. You should see two rows appear: one for the value 0 and one for the value 1. To change the color for the background: Double-click the color swatch next to the value 0. In the color picker window, you can either select white or, for better results, make it transparent by dragging the Opacity slider all the way to 0%. Click OK. To change the color for the rice fields: Double-click the color swatch next to the value 1. Select a bright red color and click OK. (Optional) You can make your map legend clearer by double-clicking in the Label column for the value 1 and typing a description like Rice Planted Fields. Click Apply to see your changes and then OK to close the window. Your map should now show red areas representing the rice fields against a transparent or white background.
+
+4. Style the District Boundaries
+Finally, let's style the district boundary layer so it acts as a clear overlay without hiding the data underneath. In the Layers Panel, drag the Sri Lanka districts layer above your rice field raster layer. This ensures the boundaries are drawn on top. Right-click the district layer and select Properties. Go to the Symbology tab. Click on Simple Fill. This will open up the fill and outline options. For Fill color, click the dropdown and select Transparent Fill. For Stroke color (the outline), choose a distinct color like black or dark gray. Adjust the Stroke width to a suitable thickness, such as 0.5 Millimeters, so the lines are clear but not overpowering. Click Apply and then OK.
+
+You're all done! Your map should now clearly display the Sri Lankan district boundaries with the areas of rice cultivation highlighted in red.
+
+
+
+
+
+
+
+
+
+
+
 # Data availability statement
 
 The data used in this analysis is available in GEE and can be accessed using the code editor and repository links provided above. Datasets outside of GEE are also provided in this repository.
