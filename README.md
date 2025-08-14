@@ -48,7 +48,9 @@ Note: Yala rice yield maps will occasionally have strong district effects due to
 
 [Visualize 15 years [2010-2024] of Yala rice maps as frequency](https://code.earthengine.google.com/3dd90fb99c5304b91610e4c6059fab43). Pixel values will range from 1 [1 year out of 15 years was detected as rice] to 15 [all 15 years were detected as rice]. Pixels are color coded from white [1 year out of 15] to red [15 years out of 15].
 
+# Data availability statement
 
+The data used in this analysis is available in GEE and cane be accessed using the code editor and repository links provided above. Datasets outside of GEE are also provided in this repository.
 
 
 
