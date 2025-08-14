@@ -67,18 +67,21 @@ Finally, let's style the district boundary layer so it acts as a clear overlay w
 
 You're all done! Your map should now clearly display the Sri Lankan district boundaries with the areas of rice cultivation highlighted in red.
 
-<ins>Example 2: </ins>Steps to recreate Figure 6 in the manuscript. Note that instructions on how to generate only a single panel of Figure 6 is provided.  The process can be repeated to produce other panels for this figure. Figure 6 contains patial patterns of the summed rice index from various parts of Sri Lanka. In general, hues of dark blue indicate a high rice index associated with rice presence, while colors of green, yellow, and red indicate the presence of non-rice crops and other land cover types. Attention is drawn to examples with a large contrast of rice fields (dark blue hues) juxtaposed against non-rice areas (green to yellow to red hues).
+<ins>Example 2: </ins>Steps to recreate Figure 6 in the manuscript. Figure 6 contains patial patterns of the summed rice index from various parts of Sri Lanka. In general, hues of dark blue indicate a high rice index associated with rice presence, while colors of green, yellow, and red indicate the presence of non-rice crops and other land cover types. Attention is drawn to examples with a large contrast of rice fields (dark blue hues) juxtaposed against non-rice areas (green to yellow to red hues). *Note that these instructions will only generate a single panel of an arbitrary location as an illustration of Figure 6 panels. The process can be repeated to produce other panels for this figure.*
 
+1. Run [this GEE](https://code.earthengine.google.com/d424339e61466f3aa6ff071987a5f6f4) script to export a single year [2020] Rsum image for an example location in Sri Lanka.
+   
+2. Add Your GeoTIFF image to QGIS. The image would have been generated from bullet 1 above. First, open QGIS and add your raster image to the project. Open a new or existing QGIS project. Locate your GeoTIFF file in the Browser Panel. Drag and drop the file into the Layers Panel or directly onto the map canvas. The image will likely appear in grayscale.
 
+3. Open the Symbology Panel. Next, you'll access the layer styling options where you can change how the raster is displayed. In the Layers Panel, right-click on your GeoTIFF layer. Select Properties from the context menu. In the new window that opens, click on the Symbology tab on the left.
 
+4. Set the Render Type. You need to switch from the default grayscale renderer to one that allows for color gradients. At the top of the Symbology panel, click the dropdown menu for Render type. Change the selection from Singleband gray to Singleband pseudocolor.
 
+5. Create the Custom Color Ramp. This is where you'll define your specific Red -> Yellow -> Dark Blue color scheme. Look for the Color ramp setting. Click the dropdown arrow next to the default color bar. From the menu, select Create New Color Ramp. In the Color ramp type dropdown, choose Gradient. You will now define the "stops" for your gradient. By default, you have two stops: one at the beginning (0.0) and one at the end (1.0). Set the starting color (Red): Click on the first stop (the square marker on the left). Click the Color box and select a bright red. Set the ending color (Dark Blue): Click on the second stop (the square marker on the right). Click the Color box and select a dark blue. Add the middle color (Yellow): Double-click in the middle of the gradient bar. A new stop will appear. Select this new stop, click the Color box, and choose a bright yellow. You can drag this stop left or right to position the yellow exactly where you want it in the transition. For your 0-3 range, leaving it in the center (position 0.5000) is a good starting point. Click OK to save your new gradient.
 
+6. Apply the Color Ramp to Your Data. Finally, apply your newly created color ramp to the values in your GeoTIFF. Back in the main Symbology panel, ensure your new Red-Yellow-Blue ramp is selected. Click the Classify button at the bottom. QGIS will read the values from your raster (from 0 to 3) and apply the full extent of your color ramp to that range. Click Apply to see your changes on the map. Click OK to close the Properties window.
 
-
-
-
-
-
+Your GeoTIFF image should now be colorized, with lower values appearing in red, transitioning through yellow for the middle values, and ending with dark blue for the highest values.
 
 # Data availability statement
 
