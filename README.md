@@ -67,6 +67,9 @@ Finally, let's style the district boundary layer so it acts as a clear overlay w
 
 You're all done! Your map should now clearly display the Sri Lankan district boundaries with the areas of rice cultivation highlighted in red.
 
+<ins>Example 2: </ins>Steps to recreate Figure 6 in the manuscript. Note that instructions on how to generate only a single panel of Figure 6 is provided.  The process can be repeated to produce other panels for this figure. Figure 6 contains patial patterns of the summed rice index from various parts of Sri Lanka. In general, hues of dark blue indicate a high rice index associated with rice presence, while colors of green, yellow, and red indicate the presence of non-rice crops and other land cover types. Attention is drawn to examples with a large contrast of rice fields (dark blue hues) juxtaposed against non-rice areas (green to yellow to red hues).
+
+
 
 
 
