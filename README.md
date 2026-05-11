@@ -83,6 +83,9 @@ You're all done! Your map should now clearly display the Sri Lankan district bou
 
 Your GeoTIFF image should now be colorized, with lower values appearing in red, transitioning through yellow for the middle values, and ending with dark blue for the highest values.
 
+Additional step-by-step instructions on how to generate all other figures are provided [here] (https://docs.google.com/document/d/1I3hjrtlsLKD8QnakZ9OJWgQAsCiBGGGCnW1y8vZ-mGY/edit?usp=sharing).
+
+
 # Data availability statement
 
 The data used in this analysis is available in GEE and can be accessed using the code editor and repository links provided above. Datasets outside of GEE are also provided in this repository.
